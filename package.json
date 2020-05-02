@@ -22,7 +22,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "rename 's/ copy/_refactor/' */** && git add -A"
+      "pre-commit": "rename 's/ copy/-refactor/' */** && git add -A"
     }
   }
 }
