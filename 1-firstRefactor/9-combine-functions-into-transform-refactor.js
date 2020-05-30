@@ -1,3 +1,5 @@
+// 重构目的：用一个数据变换函数，将所有逻辑收拢到一起，注入到接受的参数数据中
+
 // data
 reading = { customer: 'ivan', quantity: 10, month: 5, year: 2017 };
 

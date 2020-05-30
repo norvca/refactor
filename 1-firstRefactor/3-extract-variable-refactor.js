@@ -1,11 +1,4 @@
-function price(order) {
-  //price is base price - quantity discount + shipping
-  return (
-    order.quantity * order.itemPrice -
-    Math.max(0, order.quantity - 500) * order.itemPrice * 0.05 +
-    Math.min(order.quantity * order.itemPrice * 0.1, 100)
-  );
-}
+// 重构目的：给繁杂的表达式命名，让我们更容易理解这部分的逻辑辑
 
 function price(order) {
   const basePrice = order.quantity * order.itemPrice;

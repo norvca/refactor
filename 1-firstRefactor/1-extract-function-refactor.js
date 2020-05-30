@@ -1,3 +1,5 @@
+// 重构目的：把意图和实现分开，我们可以一眼看到函数的用途，而不用去关心函数如何达成用途。
+
 function printOwing(invoice) {
   printBanner();
   const outstanding = calculateOutstanding(invoice);

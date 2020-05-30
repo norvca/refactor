@@ -1,3 +1,5 @@
+// 重构目的：给繁杂的表达式命名，让我们更容易理解这部分的逻辑
+
 class Order {
   constructor(aRecord) {
     this._data = aRecord;
@@ -23,6 +25,6 @@ class Order {
   }
 
   get shipping() {
-    return Math.min(this.basePrice * 0.1, 100);
+    return Math.min(this.quantity * this.itemPrice * 0.1, 100);
   }
 }

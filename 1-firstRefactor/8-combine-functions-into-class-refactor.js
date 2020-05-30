@@ -1,3 +1,5 @@
+// 重构目的：当发现一组函数操作同一块数据，我们就可以考虑组建一个类了
+
 // data
 reading = { customer: 'ivan', quantity: 10, month: 5, year: 2017 };
 
@@ -37,9 +39,8 @@ const aReading = new Reading(rawReading);
 const baseCharge = aReading.baseCharge;
 
 // in client2
-const aReading = acquireReading();
+const rawReading = acquireReading();
 const aReading = new Reading(rawReading);
-const baseCharge = aReading.baseCharge;
 const taxableCharge = aReading.taxableCharge;
 
 // in client3

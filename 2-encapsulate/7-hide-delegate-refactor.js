@@ -1,4 +1,4 @@
-// Task: we want to hide the department in clint side to reduce coupling
+// 重构目的：如果客户端需通过某一个对象来调用后者的函数， 可以通过设置委托函数，来隐藏委托关系，减少耦合
 
 class Person {
   constructor(name) {

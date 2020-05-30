@@ -1,3 +1,5 @@
+// 重构目的：一段代码在处理两件不同的事情，就可拆分成各自独立的模块，比如按顺序执行的两个阶段来拆分
+
 function priceOrder(product, quantity, shippingMethod) {
   const priceData = calculatePriceData(product, quantity);
   const price = applyShipping(priceData, shippingMethod);
