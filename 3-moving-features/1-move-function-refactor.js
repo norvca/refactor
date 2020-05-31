@@ -1,12 +1,12 @@
-// Task: move functions out of scope
+// 重构目的：把内联函数搬移到顶层，可以单独分离出功能，减少嵌套，减轻阅读难度
 
 function trackSummary(points) {
   const totalTime = calculateTime();
-  const totalDistance = calculateDistance();
+  const totalDistance = calculateDistance(points);
   const pace = totalTime / 60 / totalDistance;
   return {
     time: totalTime,
-    distance: totalDistance,
+    distance: calculateDistance(points),
     pace: pace,
   };
 

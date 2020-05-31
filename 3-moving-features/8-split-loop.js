@@ -1,12 +1,8 @@
-// Task: split loops,then encapsulate logic into functions
-
-function getYoungest() {
-  let ageArr = people.map((p) => p.age);
-  return Math.min(...ageArr);
+let youngest = people[0] ? people[0].age : Infinity;
+let totalSalary = 0;
+for (const p of people) {
+  if (p.age < youngest) youngest = p.age;
+  totalSalary += p.salary;
 }
 
-function getTotalSalary() {
-  return people.reduce((total, p) => total + p.salary, 0);
-}
-
-return `youngestAge: ${getYoungest()}, totalSalary: ${getTotalSalary()}`;
+return `youngestAge: ${youngest}, totalSalary: ${totalSalary}`;

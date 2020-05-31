@@ -1,8 +1,12 @@
-let youngest = people[0] ? people[0].age : Infinity;
-let totalSalary = 0;
-for (const p of people) {
-  if (p.age < youngest) youngest = p.age;
-  totalSalary += p.salary;
+// 重构目的： 如果一个循环里做了多件事情，就要把逻辑分离出来，更进一步可以用算法或管道来替换循环
+
+function getYoungest() {
+  let ageArr = people.map((p) => p.age);
+  return Math.min(...ageArr);
 }
 
-return `youngestAge: ${youngest}, totalSalary: ${totalSalary}`;
+function getTotalSalary() {
+  return people.reduce((total, p) => total + p.salary, 0);
+}
+
+return `youngestAge: ${getYoungest()}, totalSalary: ${getTotalSalary()}`;

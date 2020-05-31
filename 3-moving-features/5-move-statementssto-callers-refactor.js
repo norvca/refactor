@@ -1,4 +1,4 @@
-// Task: we want to move property location out of  emitPhotoData to make it flexible
+// 重构目的： 函数边界发生偏移时，函数在某些调用点会出现不同的行为，我们要把表现出不同行为的代码从函数里挪出，并搬移到调用处
 
 function renderPerson(outStream, person) {
   outStream.write(`<p>${person.name}</p>\n`);

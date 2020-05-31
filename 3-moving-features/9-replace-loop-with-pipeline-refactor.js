@@ -1,4 +1,5 @@
-// We want to extract all India office, format them with {city, telephone}
+// 重构目的： 让管道取代循环，增加代码可读性
+
 const input = `
 office, country, telephone 
 Chicago, USA, +1 312 373 1000

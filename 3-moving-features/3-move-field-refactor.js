@@ -1,4 +1,4 @@
-// We want to move interestRate into AccoutType
+// 重构目的： 我们搬移字段到合适的地方使其形成更合适的数据结构
 
 class Account {
   constructor(number, type) {
