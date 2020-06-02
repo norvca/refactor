@@ -7,7 +7,7 @@ if (!aPlan.withinRange(low, high))
 class HeatingPlan {
   //...
 
-  withinRange(aNumberRange) {
+  withinRange(bottom, top) {
     return (
       bottom >= this._temperatureRange.low && top <= this._temperatureRange.high
     );

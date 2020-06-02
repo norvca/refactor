@@ -1,3 +1,5 @@
+// 重构目的： 移除标记参数，把提取逻辑出来组成一个明确的函数，这样更加清晰
+
 function rushDeliverData(anOrder) {
   let deliveryTime;
   if (['MA', 'CT'].includes(anOrder.deliveryState)) deliveryTime = 1;

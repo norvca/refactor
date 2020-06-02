@@ -1,3 +1,5 @@
+// 重构目的：构造函数的名字时固定的，有时会难以清晰的表明要创建的对象，我们就可以在外面进行一层包装，形成工厂函数
+
 class Employee {
   constructor(name, typeCode) {
     this._name = name;

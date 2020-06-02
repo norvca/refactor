@@ -1,3 +1,5 @@
+// 重构目的： 嵌套条件表达式难以阅读，我们可以用卫句来代替，即使返回各分支，增强可读性
+
 // Case 1 refactor
 function payAmount(employee) {
   if (employee.isSeparated) return { amount: 0, reasonCode: 'SEP' };
@@ -13,18 +15,6 @@ function payAmount(employee) {
 }
 
 // Case 2 refactor
-function adjustedCapital(anInstrument) {
-  let result = 0;
-  if (anInstrument.capital > 0) {
-    if (anInstrument.interestRate > 0 && anInstrument.duration > 0) {
-      result =
-        (anInstrument.income / anInstrument.duration) *
-        anInstrument.adjustmentFactor;
-    }
-  }
-  return result;
-}
-
 function adjustedCapital(anInstrument) {
   if (
     anInstrument.capital <= 0 ||

@@ -1,3 +1,5 @@
+// 重构目的： 有些参数函数自己本身获取也很容易，我们就可以去除参数，把责任交给函数本身，这样调用方可也可以少一个参数，而得到简化
+
 class Order {
   //...
 
@@ -10,7 +12,7 @@ class Order {
     return this.quantity > 100 ? 2 : 1;
   }
 
-  discountedPrice(basePrice, discountLevel) {
+  discountedPrice(basePrice) {
     switch (this.discountLevel) {
       case 1:
         return basePrice * 0.95;
